@@ -15,6 +15,8 @@ LOCAL_DIR = os.path.join(PROJECT_DIR, 'local')
 
 
 def reset_locals():
+    os.makedirs(LOCAL_DIR, exist_ok=True)
+    os.makedirs(DOTENV_DIR, exist_ok=True)
     for f in LOCAL_FILES:
         src = os.path.join(LOCAL_DIR_TEMPLATES, f)
         trg = os.path.join(LOCAL_DIR, f)
@@ -26,6 +28,8 @@ def reset_locals():
 
 
 def update_locals():
+    os.makedirs(LOCAL_DIR, exist_ok=True)
+    os.makedirs(DOTENV_DIR, exist_ok=True)
     for f in LOCAL_FILES:
         src = os.path.join(LOCAL_DIR_TEMPLATES, f)
         trg = os.path.join(LOCAL_DIR, f)

@@ -18,6 +18,7 @@ web/local/**
 *backups
 .mypy_cache
 .pytest_cache
+.cache
 
 # Poetry
 poetry.lock
